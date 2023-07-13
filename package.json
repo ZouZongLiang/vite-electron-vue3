@@ -1,0 +1,45 @@
+{
+  "name": "vite-electron-vue",
+  "private": true,
+  "version": "0.0.0",
+  "main": "main/main.js",
+  "author": "Nereus@zzl",
+  "scripts": {
+    "dev:vite": "vite",
+    "build:vite": "vite build",
+    "build:elec": "electron-builder",
+    "preview": "vite preview",
+    "dev:elec": "electron .",
+    "build": "vite build && electron-builder"
+  },
+  "build": {
+    "productName": "vite-electron-vue",
+    "copyright": "Copyright @ 2023 Nereus@zzl",
+    "directories": {
+      "output": "output"
+    },
+    "files": [
+      "main",
+      "dist"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": false
+    }
+  },
+  "dependencies": {
+    "element-plus": "^2.3.7",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "electron": "^25.3.0",
+    "electron-builder": "^24.4.0",
+    "vite": "^4.4.0"
+  }
+}
